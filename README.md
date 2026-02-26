@@ -41,8 +41,8 @@ import 'package:flutter/material.dart';
 import 'package:faaah/faaah.dart';
 
 void main() {
-  // 😈 Hear the "FAAAAH" on every UI or framework error!
-  Faaah.enableGlobalErrorSound();
+  WidgetsFlutterBinding.ensureInitialized(); // ⚠️ Must initialize Flutter engine first
+  Faaah.enableGlobalErrorSound(); // 😈 Hear the "FAAAAH" on every UI or framework error!
   
   runApp(const MyApp());
 }
@@ -59,7 +59,7 @@ void riskyOperation() {
   try {
     // Some code that might fail...
   } catch (e) {
-    Faaah.play(); // 😱 Triggers the meme sound
+   Future.microtask(() async => await Faaah.play()); // ⚠️ Must await the Future
     print("Handled error: $e");
   }
 }
@@ -69,7 +69,7 @@ void riskyOperation() {
 
 ## 🎮 Watch it in Action
 
-Check out the [Example App](https://github.com/Rehan1078/faaah/tree/main/example) which features a **Calculator** that screams "FAAAAH" when you divide by zero!
+Check out the [Example App](https://github.com/Rehan1078/example_faaah) which features a **Calculator** that screams "FAAAAH" when you divide by zero!
 
 ---
 
@@ -85,7 +85,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*Created with 😈 by Muhammad Rehan Yousaf*
-
-
-Check the example/ folder for a demo app showing how to use the faaah package.****
+*Created by Muhammad Rehan Yousaf*
