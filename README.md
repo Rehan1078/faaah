@@ -86,3 +86,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 *Created with 😈 by Muhammad Rehan Yousaf*
+
+
+Check the example/ folder for a demo app showing how to use the faaah package.****
