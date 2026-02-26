@@ -1,15 +1,16 @@
 # Faaah 😱
 
-A humorous Flutter package that plays the legendary **"FAAAAH"** meme sound whenever an error occurs in your application. Perfect for developers who want to add a bit of chaotic fun to their debugging and error-handling process.
+A hilarious and iconic Flutter package that plays the legendary **"FAAAAH"** meme sound whenever an error occurs in your application. Perfect for developers who want to add a bit of chaotic fun to their debugging and error-handling process.
 
 ---
 
 ## ✨ Features
 
-- **Global Error Handling:** Automatically trigger the sound on every Flutter framework error.
-- **Manual Trigger:** Play the sound on-demand using simple method calls.
-- **Easy Integration:** Single-line activation.
-- **Audible Debugging:** Know your app crashed even if you aren't looking at the logs.
+- **👂 Audible Debugging:** Know your app crashed even if you aren't looking at the logs.
+- **🛡️ Global Error Support:** Automatically trigger the sound on every Flutter framework error with one line of code.
+- **⚡ Manual Playback:** Programmatically trigger the sound in your own `try-catch` blocks.
+- **📦 Package-Friendly:** Correctly handles asset paths so it works as a dependency in any project.
+- **🪶 Lightweight:** Minimal impact on app size and performance.
 
 ---
 
@@ -22,44 +23,59 @@ dependencies:
   faaah: ^0.0.1
 ```
 
+Then, run:
+```bash
+flutter pub get
+```
+
 ---
 
-## 🛠️ Usage
+## 🛠️ How to Use
 
-### Global Sound on Errors
+### 1. Enable Global Sound (The Popular Way)
 
-The most popular way to use `faaah` is to enable it globally. Call this in your `main()` before `runApp`.
+Call `Faaah.enableGlobalErrorSound()` in your `main()` before `runApp`. This will hook into the Flutter framework's error handler.
 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:faaah/faaah.dart';
 
 void main() {
-  // Listen to all Flutter errors and play the sound!
+  // 😈 Hear the "FAAAAH" on every UI or framework error!
   Faaah.enableGlobalErrorSound();
   
   runApp(const MyApp());
 }
 ```
 
-### Manual Playback
+### 2. Manual Trigger
 
-You can also trigger the "FAAAAH" sound manually within your custom error handlers or button clicks.
+Use this inside your custom error handlers or as a fun interaction.
 
 ```dart
-try {
-  // Your risky code here...
-} catch (e) {
-  Faaah.play();
-  // Handle the error...
+import 'package:faaah/faaah.dart';
+
+void riskyOperation() {
+  try {
+    // Some code that might fail...
+  } catch (e) {
+    Faaah.play(); // 😱 Triggers the meme sound
+    print("Handled error: $e");
+  }
 }
 ```
 
 ---
 
-## 🎮 Example App
+## 🎮 Watch it in Action
 
-Check out the [example project](https://github.com/Rehan1078/faaah/tree/main/example) for a pre-built calculator that triggers the sound on division by zero!
+Check out the [Example App](https://github.com/Rehan1078/faaah/tree/main/example) which features a **Calculator** that screams "FAAAAH" when you divide by zero!
+
+---
+
+## 📖 Important Note on Assets
+
+Since this is a package, the assets are managed internally. You **do not** need to add the `.mp3` file to your own `pubspec.yaml`. Just import the package and it works out of the box!
 
 ---
 
@@ -69,4 +85,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*Made with 😈 by Muhammad Rehan Yousaf*
+*Created with 😈 by Muhammad Rehan Yousaf*

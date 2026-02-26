@@ -11,8 +11,10 @@ class Faaah {
   /// The sound file is located in the package's assets directory.
   static Future<void> play() async {
     try {
-      // In a Flutter package, assets must be accessed via 'packages/package_name/'
-      await _player.play(AssetSource('packages/faaah/assets/faaah.mp3'));
+      // In version 6.x of audioplayers, for package assets:
+      // We set the prefix to the package asset path.
+      _player.audioCache.prefix = 'packages/faaah/assets/';
+      await _player.play(AssetSource('faaah.mp3'));
     } catch (e) {
       debugPrint('Faaah: Error playing sound: $e');
     }
