@@ -124,9 +124,10 @@ packages:
   faaah:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      name: faaah
+      sha256: f6c1bc625bb43aee35c07712a5f6a3020a540cd820a57752c3f418cf87d9e5b3
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   fake_async:
     dependency: transitive
