@@ -25,12 +25,8 @@ dev_dependencies:
 flutter:
 
   # To add assets to your package, add an assets section, like this:
-   assets:
-     - assets/faaah.mp3
-  #   - images/a_dot_ham.jpeg
-  #
-  # For details regarding assets in packages, see
-  # https://flutter.dev/to/asset-from-package
+  assets:
+    - assets/faaah.mp3
   #
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

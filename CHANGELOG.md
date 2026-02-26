@@ -1,3 +1,11 @@
-## 0.0.1
+# Changelog
 
-* TODO: Describe initial release.
+All notable changes to this project will be documented in this file.
+
+## [0.0.1] - 2026-02-26
+
+### Added
+- Initial release of the `faaah` package.
+- `Faaah.play()` method to manually trigger the sound.
+- `Faaah.enableGlobalErrorSound()` to automatically play the sound on Flutter framework errors.
+- Package assets support for the "FAAAAH" meme sound.
